@@ -67,6 +67,7 @@ GEM
     ffi (1.9.6)
     hitimes (1.2.2)
     i18n (0.7.0)
+    ipaddress (0.8.0)
     json (1.8.2)
     json_pure (1.8.2)
     listen (2.8.5)
@@ -104,6 +105,7 @@ DEPENDENCIES
   dm-sqlite-adapter
   dotenv
   faker
+  ipaddress
   pg
   rerun
   sinatra

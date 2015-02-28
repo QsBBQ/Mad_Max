@@ -78,3 +78,4 @@ gw = rfc_1918.ip_addresses.create({
                          })
 
 p IpAddress.count == 1
+p barter_town.subnets.all

@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'sinatra'
 gem 'data_mapper'
 gem 'bcrypt'
+gem 'ipaddress'
 
 group :development do
   gem 'sqlite3'
