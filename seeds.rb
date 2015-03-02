@@ -52,21 +52,22 @@ first_counter = 0
 first_subnet = "192.168.0.0/24"
 first_subnet_split = first_subnet.split(".")
 10.times do
-  location = Location.create({
+  location = Location.new({
                               :name => Faker::Address.city,
                               :description => Faker::Lorem.paragraph(1),
                               :energy => Faker::Number.number(4)
                             })
+  location.save
   new_subnet = first_subnet_split[0] + "." + first_subnet_split[1] + "." + first_counter.to_s + "." + first_subnet_split[3]
   first_counter += 1
   #seeding subnets
-
-  subnet = location.subnets.create({
+  subnet = location.subnets.new({
                                     :name => Faker::Commerce.department,
                                     :network => new_subnet,
                                     :description => Faker::Lorem.paragraph(1)
 
                                     })
+  subnet.save
 
   #Seed ips in subnets
   ip = IPAddress new_subnet
@@ -75,8 +76,9 @@ first_subnet_split = first_subnet.split(".")
                               :name => Faker::Internet.domain_word,
                               :address => host.address,
                               :dns_name => Faker::Internet.domain_name,
-                              :status => "UP",
+                              :status => "Used",
                               :comments => Faker::Company.bs
-                             })
+                           })
+
   end
 end

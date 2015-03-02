@@ -74,4 +74,6 @@ end
 
 
 DataMapper.finalize
+#DataMapper.auto_migrate!
 DataMapper.auto_upgrade!
+#note new and save appeared cleaner with classes that had multiple associations

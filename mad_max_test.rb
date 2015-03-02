@@ -47,25 +47,35 @@ p mad_max.name == "Mad Max"
 p mad_max.password == "password"
 
 #test location
+puts "Location test"
 p Location.count == 0
 #testing location create
-barter_town = Location.create({
+barter_town = Location.new({
                               :name => "Barter Town",
                               :description => "Barter town using methol energy",
                               :energy => 1000
                              })
+barter_town.save
 p Location.count == 1
 
+
+#barter_town = Location.first(:name => "Barter Town")
+
+
 #Testing subnet
+puts "Subnet Test"
 p Subnet.count == 0
 
-rfc_1918 = barter_town.subnets.create({
+
+rfc_1918 = barter_town.subnets.new({
                           :name => "pig farm",
                           :network => "192.168.0.1/24",
                           :description => "Underground pig farm run by master blaster"
                          })
+rfc_1918.save
 
 p Subnet.count == 1
+
 
 p IpAddress.count == 0
 
@@ -78,4 +88,4 @@ gw = rfc_1918.ip_addresses.create({
                          })
 
 p IpAddress.count == 1
-p barter_town.subnets.all
+#p barter_town.subnets.all

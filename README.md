@@ -11,6 +11,7 @@ Mad Max has asked his IT guy to build him an app to help gather energy.
 
 v.0.5
 -As an IT guy for Mad Max, I need an IP scanner
+-As an IT guy for Mad Max, I need edit for all fields
 -As an IT guy for Mad Max, I need login authentication  
 -As an IT guy for Mad Max, Mad Max needs to approve new users
 -As an IT guy for Mad Max, I need authorization
