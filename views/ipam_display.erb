@@ -1,4 +1,4 @@
-<h2>Welcome to IPAM</h2>
+<h2>Welcome to the WasteLand</h2>
   <form method="GET" action="/">
     <input type="search" name="query" />
     <button>Search</button>
@@ -55,15 +55,15 @@
                       <td><%=ip.address%></td>
                       <td><%=ip.dns_name%></td>
                       <td>
-                        <select name="ipam[<%=ip.id%>][status]" id="status">
+                        <select name="ipam[<%=ip.id%>][status]" id="status" disabled>
                           <option value=<%=ip.status%> selected="selected"><%=ip.status%></option>
                           <option value="Used">Used</option>
                           <option value="Free">Free</option>
                           <option value="Reserved">Reserved</option>
                         </select>
                       </td>
-                      <td><input type="text" name="ipam[<%=ip.id%>][comments]" id="comments" value=<%=ip.comments%>></td>
-                      <td></td
+                      <td><input type="text" name="ipam[<%=ip.id%>][comments]" id="comments" value=<%=ip.comments%> disabled></td>
+                      <td><input type="checkbox">Edit</td>
                     </tr>
                   <% end %>
                   </form>

@@ -1,0 +1,80 @@
+<body>
+  <ul id="universe">
+    <li>Group 1</li>
+      <form>
+      <table id="table1">
+        <tr>
+          <th>IP Address</th>
+          <th>DNS Name</th>
+          <th>Status</th>
+          <th>Comments</th>
+          <th>Save</th>
+        </tr>
+        <tr>
+          <td>192.168.0.1</td>
+          <td>halo.google.com</td>
+          <td>used</td>
+          <td><input type="text" value="Halo is a unique server" disabled></td>
+          <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+          <td>192.168.0.2</td>
+          <td>fido.google.com</td>
+          <td>used</td>
+          <td><input type="text" value="fido is a unique host" disabled></td>
+          <td><input type="checkbox"></td>
+        </tr>
+      </table>
+      </form>
+      <li>Group 2</li>
+        <form>
+        <table id="table1">
+          <tr>
+            <th>IP Address</th>
+            <th>DNS Name</th>
+            <th>Status</th>
+            <th>Comments</th>
+            <th>Save</th>
+          </tr>
+          <tr>
+            <td>192.168.1.1</td>
+            <td>bobo.google.com</td>
+            <td>used</td>
+            <td><input type="text" value="bobo is a unique server" disabled></td>
+            <td><input type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>192.168.1.2</td>
+            <td>hipster.google.com</td>
+            <td>used</td>
+            <td><input type="text" value="hipster is a unique host" disabled></td>
+            <td><input type="checkbox"></td>
+          </tr>
+        </table>
+        </form>
+      </ul>
+  <script>
+    function hello_world(){
+      alert('Hello, World!')
+    }
+
+    function getTarget(e) {
+      return e.target
+    }
+
+    function disableEnable(e) {
+      var target, elParent;
+      target = getTarget(e);
+      elParent = target.parentNode;
+      if target.disabled == true {
+        console.log("True");
+      } else {
+        console.log("False");
+      }
+    }
+
+    var el = document.getElementById('universe');
+    el.addEventListener('click', disableEnable, false);
+
+  </script>
+</body>
