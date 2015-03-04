@@ -68,8 +68,19 @@
       }
     }
 
+    function enableDisable(e){
+      var target, previtem, parent;
+      target = getTarget(e);
+      parent = target.parentNode;
+      previtem = parent.previousSibling;
+      console.log(previtem)
+
+    }
+
     var el = document.getElementById('checkbox1');
-    el.addEventListener('click', myLoop, false);
+    el.addEventListener('click', function(e) {
+      enableDisable(e);
+    }, false);
 
   </script>
 </body>
