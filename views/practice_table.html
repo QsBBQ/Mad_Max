@@ -15,7 +15,7 @@
           <td>halo.google.com</td>
           <td>used</td>
           <td><input type="text" value="Halo is a unique server" disabled></td>
-          <td><input type="checkbox"></td>
+          <td><input type="checkbox" id="checkbox1"></td>
         </tr>
         <tr>
           <td>192.168.0.2</td>
@@ -62,19 +62,14 @@
       return e.target
     }
 
-    function disableEnable(e) {
-      var target, elParent;
-      target = getTarget(e);
-      elParent = target.parentNode;
-      if target.disabled == true {
-        console.log("True");
-      } else {
-        console.log("False");
+    function myLoop(){
+      for (var i = 0; i < 10; i++) {
+        console.log("my loop");
       }
     }
 
-    var el = document.getElementById('universe');
-    el.addEventListener('click', disableEnable, false);
+    var el = document.getElementById('checkbox1');
+    el.addEventListener('click', myLoop, false);
 
   </script>
 </body>
