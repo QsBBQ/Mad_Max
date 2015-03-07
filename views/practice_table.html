@@ -23,7 +23,7 @@
           <td>fido.google.com</td>
           <td>used</td>
           <td><input type="text" value="fido is a unique host" disabled></td>
-          <td><input type="checkbox" id="checkbox1"></td>
+          <td><input type="checkbox"></td>
         </tr>
       </table>
       </form>
@@ -80,18 +80,26 @@ var child;
     parent = target.parentNode;
     previtem = parent.previousElementSibling;
     child = previtem.firstChild;
-    console.log(child);
-    child.disabled = false;
-    console.log(child);
+    if (child.disabled = true) {
+      console.log("disabled switch to enabled");
+      child.disabled = false;
+      console.log(child.disabled)
+    }else{
+      console.log("enabled switch to disabled");
+      child.disabled = true;
+    }
+    //child.disabled = false;
 
   }
 
   var checkbox = document.querySelectorAll("input[type=checkbox]");
-  for (var i=0; i<checkbox.length; i++);
-    var el = document.getElementById(checkbox[i]);
-    el.addEventListener('click', function(e) {
+  //console.log(checkbox);
+
+  for (var i=0; i<checkbox.length; i++){;
+    checkbox[i].addEventListener('click', function(e) {
       enableDisable(e);
     }, false);
+  }
 
 </script>
 </body>

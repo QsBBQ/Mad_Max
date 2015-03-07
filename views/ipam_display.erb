@@ -4,43 +4,16 @@
     <button>Search</button>
   </form>
   <section>
-    <!--Ok thinking about twitter bootstrap
-      Also working on js so every table doesn't post to params
-    -->
-    <strong>Dystopian Locations</strong>
+    <h1><strong>Dystopian Locations</strong></h1>
     <ul>
+      <div id="locations">
       <% locations.each do |location| %>
-        <li><%= location.name %></li>
-          <ul class="accordion">
+        <h2><li><%= location.name %></li><h2>
+          <ul>
+            <div id="subnets">
             <% location.subnets.each do |subnet| %>
-              <li id="subnet"><strong><%= subnet.network %></strong></li>
+              <h3><li><%= subnet.network %></li></h3>
                 <table id="subnet_table">
-                  <tr>
-                    <th>IP Address
-                      <form method="GET" action="/">
-                        <input type="search" name="query" />
-                        <button>Search</button>
-                      </form>
-                    </th>
-                    <th>DNS Name
-                      <form method="GET" action="/">
-                        <input type="search" name="query" />
-                        <button>Search</button>
-                      </form>
-                    </th>
-                    <th>Status
-                      <form method="GET" action="/">
-                        <input type="search" name="query" />
-                        <button>Search</button>
-                      </form>
-                    </th>
-                    <th>Comments
-                      <form method="GET" action="/">
-                        <input type="search" name="query" />
-                        <button>Search</button>
-                      </form>
-                    </th>
-                  </tr>
                   <form method="POST" action="/ipam/save">
                   <tr>
                     <th>IP Address</th>
@@ -69,7 +42,9 @@
                   </form>
                 </table>
             <% end %>
+            </div>
           </ul>
       <% end %>
+    </div>
     </ul>
   </section>
