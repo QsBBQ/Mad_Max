@@ -4,13 +4,13 @@
     <button>Search</button>
   </form>
   <section>
-    <h1><strong>Dystopian Locations</strong></h1>
+    <h1>Dystopian Locations</h1>
     <ul>
-      <div id="locations">
+      <div class="accordion-class">
       <% locations.each do |location| %>
         <h2><li><%= location.name %></li><h2>
           <ul>
-            <div id="subnets">
+            <div class="accordion-class">
             <% location.subnets.each do |subnet| %>
               <h3><li><%= subnet.network %></li></h3>
                 <table id="subnet_table">
@@ -36,7 +36,7 @@
                         </select>
                       </td>
                       <td><input type="text" name="ipam[<%=ip.id%>][comments]" id="comments" value=<%=ip.comments%> disabled></td>
-                      <td><input type="checkbox">Edit</td>
+                      <td><input class="checkbox" type="checkbox">Edit</td>
                     </tr>
                   <% end %>
                   </form>
