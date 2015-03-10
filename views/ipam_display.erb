@@ -14,7 +14,8 @@
             <% location.subnets.each do |subnet| %>
               <h3><li><%= subnet.network %></li></h3>
                 <table id="subnet_table">
-                  <form method="POST" action="/ipam/save">
+                  <form method="post" action="/ipam/save">
+                    <input type="hidden" name="_method" value="put"
                   <tr>
                     <th>IP Address</th>
                     <th>DNS Name</th>

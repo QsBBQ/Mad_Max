@@ -10,10 +10,11 @@ Tommorrow land
 Mad Max has asked his IT guy to build him an app to help gather energy.
 
 v0.5
--As an IT guy for Mad Max, I need to be able to see ip usage status.
--As an IT guy for Mad Max, I need to edit comments.
+-As an IT guy for Mad Max, I need to be able to see ip usage status. -Done
+-As an IT guy for Mad Max, I need to edit comments. -Done
 -As an IT guy for Mad Max, I need to edit status ie. free, used, reserved.
--As an IT guy for Mad Max, I need a view that can help manage a large data set to see all the ip's.
+-As an IT guy for Mad Max, I need a view that can help manage a large data set to see all the ip's. -Done
+-As an IT guy for Mad Max, I need to be able to add new subnets.
 -As an IT guy for Mad Max, I need a subnet capacity view.
 
 -As an IT guy for Mad Max, I need login authentication.  

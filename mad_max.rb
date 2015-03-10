@@ -20,18 +20,16 @@ get "/ipam" do
                                  }
 end
 
-post "/ipam/save" do
+put "/ipam/save" do
   #params.inspect
-  params["ipam"].each do |id,value|
+  params["ipam"].each do |id, form_values|
     ip_id = id
     ip_address = IpAddress.get(ip_id)
-    params["ipam"]["#{ip_id}"].each do |property,value|
-      #property doesn't seem to be passing the variable
-      ip_address.property = value
-    end
+    ip_address.status = form_values["status"]
+    ip_address.comments = form_values["comments"]
     ip_address.save
   end
-  #redirect "/ipam"
+  redirect "/ipam"
 end
 
 get "/ipam/edit" do
