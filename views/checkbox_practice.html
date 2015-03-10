@@ -41,7 +41,7 @@
                   <input type="text" value="beast is a unique host" disabled>
                 </td>
                 <td>
-                  <input type="checkbox">
+                  <input class="checkbox" type="checkbox">
                 </td>
               </tr>
             </table>
@@ -200,8 +200,19 @@
 
 
       $(".checkbox").on('click', function(e) {
-        var find_family = $(e.target.closest('tr'));
-        console.log(find_family);
+        //var find_family = $(e.target);
+        //console.log(e);
+        //console.log(e.target);
+        //console.log(e.target.closest('tr'));
+        //console.log($(this).closest('tr').find('input:text'));
+        //console.log($(this).prop('checked'));
+        if ($(this).prop('checked')) {
+          console.log("codeunion rocks!!")
+          $(this).closest('tr').find('input:text').prop('disabled', false);
+        }
+        else {
+          $(this).closest('tr').find('input:text').prop('disabled', true);
+        }
 
       });
 
